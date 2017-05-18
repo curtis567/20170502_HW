@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h>輸入日期計算天數</h><br>
+        <input type="date" id="date1" value=""/>
+        <button id="mydate" onclick= "onclickfunction()">點擊計算</button>
+        <div id="demo"></div>
+        
+        <script>
+            function onclickfunction(){
+                var x = document.getElementById("date1").value;
+                var y = new Date(x);
+                var u = new Date(x);
+                    u.setMonth(0);
+                    u.setDate(1);
+                var z = (y-u )/(24*60*60*1000)+1;
+                 alert("這一天是今年的第"+z+"天")
+            }
+        </script>
+    </body>
+</html>
